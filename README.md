@@ -2,7 +2,7 @@
 
 # The Practical Training for the BILD Summer School (https://bild2025.github.io/)
 
-![BILD Poster]()
+![BILD Poster](Poster.jpg)
 
 ## Outline
 1. DataLoader
