@@ -11,6 +11,7 @@ body:
         Please fill out this checklist based on your review. Add inline comments or edits in the notebook itself where helpful.
 
   - type: checkboxes
+    id: content_pedagogy
     attributes:
       label: Content & Pedagogy
       options:
@@ -24,6 +25,7 @@ body:
           required: true
 
   - type: checkboxes
+    id: reproducibility_robustness
     attributes:
       label: Reproducibility & Robustness
       options:
@@ -39,6 +41,7 @@ body:
           required: true
 
   - type: checkboxes
+    id: performance_timing
     attributes:
       label: Performance & Timing
       options:
@@ -50,6 +53,7 @@ body:
           required: false
 
   - type: checkboxes
+    id: low_resource
     attributes:
       label: Low-Resource Readiness
       options:
@@ -59,6 +63,7 @@ body:
           required: false
 
   - type: checkboxes
+    id: outputs_interpretation
     attributes:
       label: Outputs & Interpretation
       options:
@@ -70,6 +75,7 @@ body:
           required: false
 
   - type: checkboxes
+    id: documentation_environment
     attributes:
       label: Documentation & Environment
       options:
@@ -81,8 +87,8 @@ body:
   - type: input
     id: issues
     attributes:
-      label: Observed issues (errors, broken steps, unclear parts)
-      description: Provide concise reproduction steps and context.
+      label: Observed issues
+      description: Errors, broken steps, unclear parts with reproduction details.
 
   - type: input
     id: suggestions
@@ -103,5 +109,4 @@ body:
     id: additional_notes
     attributes:
       label: Additional notes
-      description: Anything else worth flagging (e.g., parameter exploration ideas, optional extensions).
-
+      description: Anything else worth flagging (parameter explorations, optional extensions, etc.).
