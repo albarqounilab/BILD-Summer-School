@@ -73,7 +73,7 @@ body:
     attributes:
       label: Documentation & Environment
       options:
-        - label: "How to run" section present
+        - label: How to run section present
           required: true
         - label: Version dependencies called out
           required: false
