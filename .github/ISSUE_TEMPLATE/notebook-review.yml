@@ -1,14 +1,16 @@
 name: Notebook Review Feedback
 description: Structured feedback from tutors after reviewing a hands-on notebook.
 title: "[Review] {notebook name}"
-labels: ['notebook-review', 'tutor-feedback']
+labels:
+  - notebook-review
+  - tutor-feedback
 assignees: []
 
 body:
   - type: markdown
     attributes:
       value: |
-        Please fill out this checklist based on your review. Add inline comments or edits in the notebook itself where helpful.
+        Please fill out this checklist based on your review. Add inline comments or edits in the notebook itself where helpful. Specify which notebook you reviewed in the title or first line.
 
   - type: checkboxes
     id: content_pedagogy
@@ -96,7 +98,7 @@ body:
       label: Suggestions for improvement
       description: Clarity, structural, pedagogical, or extension ideas.
 
-  - type: select
+  - type: dropdown
     id: readiness
     attributes:
       label: Readiness status
