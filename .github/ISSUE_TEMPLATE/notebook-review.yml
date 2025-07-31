@@ -1,0 +1,107 @@
+name: Notebook Review Feedback
+description: Structured feedback from tutors after reviewing a hands-on notebook.
+title: "[Review] {notebook name}"
+labels: ['notebook-review', 'tutor-feedback']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out this checklist based on your review. Add inline comments or edits in the notebook itself where helpful.
+
+  - type: checkboxes
+    attributes:
+      label: Content & Pedagogy
+      options:
+        - label: Walked through notebook as a first-time student
+          required: true
+        - label: Expectations/goals clearly stated per section
+          required: true
+        - label: Tunable parameters highlighted with exploration prompts
+          required: true
+        - label: Narrative transitions present
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: Reproducibility & Robustness
+      options:
+        - label: All imports work in a fresh environment
+          required: true
+        - label: Dependencies on previous artifacts are explicit
+          required: true
+        - label: Fallbacks (e.g., pre-trained model) provided
+          required: false
+        - label: Randomness controlled or explained
+          required: false
+        - label: Notebook runs without errors
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: Performance & Timing
+      options:
+        - label: Runtime estimates provided
+          required: false
+        - label: Heavy steps flagged with mitigation suggestions
+          required: false
+        - label: Checkpointing exists for long computations
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: Low-Resource Readiness
+      options:
+        - label: Tested under constrained CPU/RAM
+          required: false
+        - label: Implicit assumptions made explicit
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: Outputs & Interpretation
+      options:
+        - label: Plots/tables labeled clearly
+          required: true
+        - label: Reflection prompts included
+          required: false
+        - label: Sanity checks present
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: Documentation & Environment
+      options:
+        - label: "How to run" section present
+          required: true
+        - label: Version dependencies called out
+          required: false
+
+  - type: input
+    id: issues
+    attributes:
+      label: Observed issues (errors, broken steps, unclear parts)
+      description: Provide concise reproduction steps and context.
+
+  - type: input
+    id: suggestions
+    attributes:
+      label: Suggestions for improvement
+      description: Clarity, structural, pedagogical, or extension ideas.
+
+  - type: select
+    id: readiness
+    attributes:
+      label: Readiness status
+      options:
+        - Ready as-is
+        - Minor edits needed
+        - Major revision needed
+
+  - type: input
+    id: additional_notes
+    attributes:
+      label: Additional notes
+      description: Anything else worth flagging (e.g., parameter exploration ideas, optional extensions).
+
